@@ -1,4 +1,4 @@
-madmin [![Build Status](https://travis-ci.org/bustardcelly/madmin.png)](https://travis-ci.org/bustardcelly/madmin)
+madmin [![Build Status](https://travis-ci.org/infrared5/madmin.png)](https://travis-ci.org/infrared5/madmin)
 =============
 
 > admin console for generating mock services with RESTful URIs.
