@@ -9,7 +9,7 @@ Getting and deploying madmin
 
 1. Clone the <code>madmin</code> repo:
 
-		git clone git@github.com:bustardcelly/madmin.git
+		git clone git@github.com:infrared5/madmin.git
 
 2. Install the node module dependencies deifned in <code>package.json</code>
 
@@ -104,7 +104,7 @@ Opening channels for communication is always a plus, and the fact that it provid
 
 How?
 ---
-The <code>madmin</code> application works by updating a target JSON source file that describes the RESTful URIs. This file is modified using a RESTful API of the <code>madmin</code> server application, itself. You can check out the schema for the source JSON file that defines the API at [https://github.com/bustardcelly/madmin/blob/master/doc/madmin-api-schema.json](https://github.com/bustardcelly/madmin/blob/master/doc/madmin-api-schema.json)
+The <code>madmin</code> application works by updating a target JSON source file that describes the RESTful URIs. This file is modified using a RESTful API of the <code>madmin</code> server application, itself. You can check out the schema for the source JSON file that defines the API at [https://github.com/infrared5/madmin/blob/master/doc/madmin-api-schema.json](https://github.com/infrared5/madmin/blob/master/doc/madmin-api-schema.json)
 
 While it is possible to interact with the <code>madmin</code> server-side applicaiton using the command line - with such CLI tools such as [cURL](http://curl.haxx.se/) - a client-side applicaiton is available that provides ease of use and self-documentation.
 
@@ -114,32 +114,32 @@ Once the [server is started](#usageanchor), you can access the GUI console for <
 
 With an empty JSON API resource file, you will be presented with a console that provides an _"add new"_ button only:
 
-![empty madmin console with no defined RESTful URIs](https://raw.github.com/bustardcelly/madmin/master/doc/images/empty_console.png "Empty Console")
+![empty madmin console with no defined RESTful URIs](https://raw.github.com/infrared5/madmin/master/doc/images/empty_console.png "Empty Console")
 
 Upon adding a new route, you are presented with an empty editable console with various parameters:
 
-![empty route console with undefined properties](https://raw.github.com/bustardcelly/madmin/master/doc/images/new_route_empty.png "Empty Route")
+![empty route console with undefined properties](https://raw.github.com/infrared5/madmin/master/doc/images/new_route_empty.png "Empty Route")
 
 The following is a breakdown of each section from this _route console_ UI:
 
 #### Method
 The **Method** dropdown allows you to select the desired REST method to associate with the URI defined in the **Path** field:
 
-![route method panel](https://raw.github.com/bustardcelly/madmin/master/doc/images/route_method.png "Route Method")
+![route method panel](https://raw.github.com/infrared5/madmin/master/doc/images/route_method.png "Route Method")
 
 #### Path
 The **Path** field defines the URI to add to the REST service:
 
-![route path panel field](https://raw.github.com/bustardcelly/madmin/master/doc/images/route_path.png "Route Path")
+![route path panel field](https://raw.github.com/infrared5/madmin/master/doc/images/route_path.png "Route Path")
 
 The **Summary** field allows for entering a description for the URI. When input focus is lost on the **Path** field, the listing of **Parameters** is updated and allows for providing descriptions for each variable:
 
-![route summary panel](https://raw.github.com/bustardcelly/madmin/master/doc/images/route_path_multiple.png "Route Summary")
+![route summary panel](https://raw.github.com/infrared5/madmin/master/doc/images/route_path_multiple.png "Route Summary")
 
 #### Response
 The **Response** field allows for defining the JSON returned from the URI. As well, you can choose which response to provide:
 
-![route response panel field](https://raw.github.com/bustardcelly/madmin/master/doc/images/route_response.png "Route Response")
+![route response panel field](https://raw.github.com/infrared5/madmin/master/doc/images/route_response.png "Route Response")
 
 In reality it will return a 200 status with the selected JSON from either **Success** or **Error**. We often supply errors on a 200 and parse the response. This was an easy way for the team to coordinate the successful and error responses that come in JSON from the request.
 
@@ -147,17 +147,17 @@ In reality it will return a 200 status with the selected JSON from either **Succ
 
 When saved, the new route will be added to the supplies source JSON file and the client-side <code>madmin</code> console will change to the listing of URIs defined:
 
-![Save Route](https://raw.github.com/bustardcelly/madmin/master/doc/images/route_saved.png "Saved Route")
+![Save Route](https://raw.github.com/infrared5/madmin/master/doc/images/route_saved.png "Saved Route")
 
 As well, the path and its proper response will be available immediately and available to develop against.
 
 *	With <code>Error</code> selected from the **Response** field:
 
-![error response on URI](https://raw.github.com/bustardcelly/madmin/master/doc/images/route_response_error.png "Error Response")
+![error response on URI](https://raw.github.com/infrared5/madmin/master/doc/images/route_response_error.png "Error Response")
 
 *	With <code>Success</code> selected from the **Response** field:
 
-![success response on URI](https://raw.github.com/bustardcelly/madmin/master/doc/images/route_response_success.png "Success Response")
+![success response on URI](https://raw.github.com/infrared5/madmin/master/doc/images/route_response_success.png "Success Response")
 
 
 ##### note
