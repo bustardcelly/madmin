@@ -1,0 +1,67 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "#",
+  "required":false,
+  "properties":{
+    "api": {
+      "type":"array",
+      "id": "api",
+      "required":false,
+      "items":
+        {
+          "type":"object",
+          "required":false,
+          "properties":{
+            "delay": {
+              "type":"number",
+              "id": "delay",
+              "required":false
+            },
+            "error": {
+              "type":"object",
+              "id": "error",
+              "required":false
+            },
+            "id": {
+              "type":"string",
+              "id": "id",
+              "required":false
+            },
+            "method": {
+              "type":"string",
+              "id": "method",
+              "required":false
+            },
+            "parameters": {
+              "type":"array",
+              "id": "parameters",
+              "required":false
+            },
+            "path": {
+              "type":"string",
+              "id": "path",
+              "required":false
+            },
+            "response": {
+              "type":"string",
+              "id": "response",
+              "required":false
+            },
+            "result": {
+              "type":"object",
+              "id": "result",
+              "required":false
+            },
+            "summary": {
+              "type":"string",
+              "id": "summary",
+              "required":false
+            }
+          }
+        }
+      
+
+    }
+  }
+}

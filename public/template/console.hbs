@@ -1,0 +1,15 @@
+<header class="page-header">
+  <h1>madmin console</h1>
+</header>
+<section id="section">
+    {{#api}}
+        {{#route_console}}{{this}}{{/route_console}}
+    {{/api}}
+    <button id="add-route-button" class="btn btn-primary">add new</button>
+</section>
+<footer>
+    <p>madmin is an open source project hosted by <a class="credit-link" href="http://infrared5.com">infrared5.com</a>.</p>
+  </footer>
+  <script src="lib/require-2.1.0.min.js"></script>
+  <script src="script/madmin.js"></script>
+</body>

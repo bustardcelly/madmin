@@ -1,0 +1,112 @@
+.btn-group {
+	margin-bottom: 9px;
+}
+
+.route-item {
+	padding: 10px;
+	margin: 10px;
+	background-color: #EEEEEE;
+	min-width: 260px;
+}
+
+.route-item-hidden {
+	display: none;
+}
+
+.route-header {
+	margin-top: 0px;
+}
+
+.route-item-summary {
+	margin: 0px 0px 9px 0px !important;
+}
+
+.route-close-btn {
+	float: right;
+	margin-top: -10px;
+}
+
+.route-item-form-item {
+	margin-bottom: 24px !important;
+	border-bottom: 1px solid #BBB !important;
+}
+
+.route-item-form-label {
+	margin-bottom: 4px;
+}
+
+.route-item-form-label small {
+	font-style: italic;
+}
+
+.route-item-parameters {
+	margin-bottom: 9px;
+}
+
+.route-item-input {
+	width: 100% !important;
+}
+
+.route-item-result-input {
+	min-height: 180px;
+}
+
+.route-item-error-input {
+	min-height: 70px;
+}
+
+.route-data-input-block {
+	display: inline-block;
+	max-width: 460px;
+	padding-left: 15px;
+}
+
+.route-item-method-button {
+	min-width: 80px;
+	text-align: left !important;
+}
+
+.route-item-radio {
+	margin-bottom: 6px !important;
+}
+
+.route-item-radio-label {
+	display: inline;
+	margin-left: 5px;
+	font-weight: bold;
+}
+
+.route-item-radio-label small {
+	font-style: italic;
+	font-size: 14px;
+	color: #999;
+	font-weight: normal;
+}
+
+.add-parameter-btn {
+	margin-bottom: 9px;
+}
+
+.parameter-row {
+	padding-right: 20px;
+}
+
+.parameter-row:nth-child(even) {
+	background-color: #CCC;
+}
+
+.parameter-row:nth-child(odd) {
+	background-color: #DDD;
+}
+
+.parameter-form-field {
+	padding: 3px 24px 5px 10px;
+}
+
+.parameter-input {
+	width: 100%;
+}
+
+.no-parameters-label {
+	font-size: 0.8em;
+}

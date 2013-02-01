@@ -1,0 +1,38 @@
+.parameters-header {
+	margin-top: 6px;
+	padding: 10px;
+	background-color: #CCCCCC;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+.parameter-entry:nth-child(odd) {
+	background-color: #DDDDDD;
+}
+
+.parameter-entry:nth-child(even) {
+	background-color: #FDFDFD;
+}
+
+.parameter-entry {
+	padding: 10px;
+	margin-bottom: 0 !important;
+}
+
+.parameter-name {
+	font-weight: bold;
+}
+
+.parameter-summary {
+	float: right;
+	font-style: italic;
+}
+
+.route-edit-btn {
+	float: right;
+}
+
+.route-delete-btn {
+	float: right;
+	margin-right: 10px;
+}

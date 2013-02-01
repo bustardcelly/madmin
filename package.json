@@ -1,0 +1,44 @@
+{
+  "name": "madmin",
+  "version": "0.1.0",
+  "author": {
+    "name": "Todd Anderson",
+    "email": "todd@infrared5.com",
+    "url": "http://infrared5.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": [
+    "node >=0.8.6"
+  ],
+  "scripts": {
+    "test": "grunt --gruntfile grunt.js --verbose"
+  },
+  "dependencies": {
+    "hbs": ">=2.0.1",
+    "express": ">=3.0",
+    "winston": "~0.6.2",
+    "node-promise": "0.5.4",
+    "optimist": ">=0.3.5"
+  },
+  "devDependencies": {
+    "jasmine-node": "*",
+    "sinon": "1.5.0",
+    "requirejs": "~2.1.1",
+    "jquery": "~1.8.2",
+    "amdefine": ">=0.0.4",
+    "proxyquire": ">=0.3.2",
+    "supertest": "0.5.1",
+    "grunt": "~0.3.17",
+    "grunt-jasmine-node": ">=0.0.5",
+    "grunt-contrib-jasmine": "~0.3.0rc5",
+    "grunt-template-jasmine-requirejs": "~0.1.0",
+    "grunt-contrib-jshint": "~0.1.0",
+    "grunt-contrib-watch": "~0.1.4",
+    "grunt-jasmine-task": "~0.2.3",
+    "temporary": "0.0.5"
+  },
+  "private": "true"
+}

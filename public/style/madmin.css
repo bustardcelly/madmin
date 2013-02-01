@@ -1,0 +1,70 @@
+body {
+	font-family: Arial, sans-serif;
+	padding: 0 20px;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+section {
+	margin-bottom: 1.5em;
+}
+
+footer {
+	font-size: 0.86em;
+	text-align: center;
+}
+
+.credit-link {
+	color: #ff0000;
+	text-decoration: none;
+}
+
+/* http://stackoverflow.com/questions/5219175/width-100-padding */
+.input-container {
+	margin-right: 15px;
+}
+
+.route-add-btn {
+	position: relative;
+	right: 0;
+}
+
+.modal-alert {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: center;
+	z-index: 1001;
+}
+
+.modal-alert-overlay {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.5;
+}
+
+.modal-alert-dialog {
+	position: absolute;
+	top: 30%;
+	left: 25%;
+	right: 25%;
+	min-width: 200px;
+	padding: 8px 14px !important;
+}
+
+.alert-deny-btn {
+	margin-bottom: 0.5em;
+}
+
+.alert-confirm-btn {
+	margin-bottom: 0.5em;
+}

@@ -1,0 +1,63 @@
+<div class="route-item-editable route-item-hidden">
+    <button class="btn route-close-btn">close</button>
+    <div class="route-item-form-item">
+        <h4 class="route-item-form-label">Method: <small>select the RESTful method</small></h4>
+        <div class="btn-group">
+            <button class="btn route-item-method-button">
+                {{method}}
+            </button>
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">GET</a></li>
+                <li><a href="#">POST</a></li>
+                <li><a href="#">PUT</a></li>
+                <li><a href="#">DELETE</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="route-item-form-item">
+        <h4 class="route-item-form-label">Path: <small>variables prefixes with :</small></h4>
+        <div class="input-container">
+            <input class="route-item-input route-item-path" type="text" value="{{path}}">
+        </div>
+    </div>
+    <div class="route-item-form-item">
+        <h4 class="route-item-form-label">Summary: <small>provide a short summary describing the operation</small></h4>
+        <div class="input-container">
+            <textarea class="route-item-input route-item-summary" placeholder="Enter a summary for the method...">{{summary}}</textarea>
+        </div>
+    </div>
+    <div class="route-item-form-item">
+        <h4 class="route-item-form-label">Parameters: <small>provide a summary describing each parameter</small></h4>
+        <div class="route-item-parameters">
+            {{#if parameters}}
+                {{#parameters}}
+                    {{#parameter_form}}{{this}}{{/parameter_form}}
+                {{/parameters}}
+            {{/if}}
+        </div>
+    </div>
+    <div class="route-item-form-item route-item-response-form">
+        <h4 class="route-item-form-label">Response: <small>select the default JSON response from the request</small></h4>
+        <div class="route-data-input-block">
+            <input id="resultResponse_{{index-input this}}" class="route-item-radio" type="radio" name="response_{{index-input this}}" value="radiobutton">
+            <label class="route-item-form-label route-item-radio-label" for="resultResponse_{{index-input this}}">Success: <small>paste in JSON to return for successful response</small></label>
+            <div class="input-container">
+                <textarea class="route-item-input route-item-result-input" placeholder="Enter JSON...">{{stringify result}}</textarea>
+            </div>
+        </div>
+        <div class="route-data-input-block">
+            <input id="errorResponse_{{index-input this}}" class="route-item-radio" type="radio" name="response_{{index-input this}}" value="radiobutton">
+            <label class="route-item-form-label route-item-radio-label" for="errorResponse_{{index-input this}}">Error: <small>paste in JSON expected for a fault in request</small></label>
+            <div class="input-container">
+                <textarea class="route-item-input route-item-error-input" placeholder="Enter JSON...">{{stringify error}}</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="route-item-editable-btn-group">
+        <button class="btn btn-primary route-item-commit-btn">save</button>
+        <button class="btn route-item-cancel-btn">cancel</button>
+    </div>
+</div>

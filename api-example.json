@@ -1,0 +1,40 @@
+{
+  "api": [
+    {
+      "id": "0",
+      "path": "/routes",
+      "method": "GET",
+      "summary": "Find all routes available.",
+      "parameters": [],
+      "result": {
+        "test": 123,
+        "greeting": "hello, world"
+      },
+      "error": {
+        "error": "Routes not found"
+      },
+      "response": "error",
+      "delay": 1000
+    },
+    {
+      "id": "1",
+      "path": "/routes/:routeId",
+      "method": "GET",
+      "summary": "Find destinations along route.",
+      "parameters": [
+        {
+          "name": "routeId",
+          "summary": "ID of route that is used to find destinations."
+        }
+      ],
+      "result": {
+        "name": "station to station"
+      },
+      "error": {
+        "error": "Routes not found"
+      },
+      "response": "error",
+      "delay": 1000
+    }
+  ]
+}

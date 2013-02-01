@@ -1,0 +1,19 @@
+{
+    "path":"/routes/:routeId/:time",
+    "method":"GET",
+    "summary":"Find destinations along route.",
+    "parameters":[
+        {
+            "name":"routeId",
+            "summary":"ID of route that is used to find destinations."
+        }
+    ],
+    "result": {
+        "value": 10000
+    },
+    "error": {
+        "error": "Routes not found"
+    },
+    "response": "result",
+    "delay": 1000
+}

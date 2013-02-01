@@ -1,0 +1,14 @@
+<div class="route-item-uneditable">
+    <button class="btn route-edit-btn">edit</button>
+    <button class="btn btn-danger route-delete-btn">delete</button>
+    <h2 class="route-header">{{method}} <small>{{path}}</small></h2>
+    <p class="route-item-summary">{{summary}}</p>
+    {{#if parameters}}
+    <div class="parameters-header">parameters</div>
+    <div class="parameters-list">
+        {{#parameters}}
+            {{#parameter_item}}{{this}}{{/parameter_item}}
+        {{/parameters}}
+    </div>
+    {{/if}}
+</div>
