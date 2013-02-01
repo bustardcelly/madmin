@@ -44,14 +44,25 @@ define(['jquery', 'text!template/uneditable-console.hbs', 'text!template/paramet
         populate: function(routeData) {
           var $header = $('.route-header', this.$element),
               $summary = $('.route-item-summary', this.$element),
-              $parameterContainer = $('.parameters-list', this.$element),
+              $parameterContainer = $('.parameter-container', this.$element ),
+              $parameterList = $('.parameters-list', this.$element),
               i, length = routeData.parameters.length;
 
           $header.html(routeData.method + ' <small>' + routeData.path + '</small>');
           $summary.text(routeData.summary);
-          $parameterContainer.empty();
-          for( i = 0; i < length; i++ ) {
-            $(parameterTemplate(routeData.parameters[i])).appendTo($parameterContainer);
+          $parameterList.empty();
+          if( length > 0 ) {
+            if($parameterContainer.hasClass('hidden')) {
+              $parameterContainer.removeClass('hidden');
+            }
+            for( i = 0; i < length; i++ ) {
+              $(parameterTemplate(routeData.parameters[i])).appendTo($parameterList);
+            }
+          }
+          else {
+            if(!$parameterContainer.hasClass('hidden')) {
+              $parameterContainer.addClass('hidden');
+            }
           }
         },
         deactivate: function() {
