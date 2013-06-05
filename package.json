@@ -31,7 +31,7 @@
     "amdefine": ">=0.0.4",
     "proxyquire": ">=0.3.2",
     "supertest": "0.5.1",
-    "grunt": "~0.3.17",
+    "grunt": "~0.4.0",
     "grunt-jasmine-node": ">=0.0.5",
     "grunt-contrib-jasmine": "~0.3.0rc5",
     "grunt-template-jasmine-requirejs": "~0.1.0",
