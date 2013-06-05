@@ -4,3 +4,4 @@ node_modules
 test/notes.txt
 deprecated.*
 _SpecRunner.html
+.grunt
