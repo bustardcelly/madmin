@@ -14,7 +14,7 @@
     "node >=0.8.6"
   ],
   "scripts": {
-    "test": "grunt --gruntfile grunt.js --verbose"
+    "test": "grunt --gruntfile Gruntfile.js --verbose"
   },
   "dependencies": {
     "hbs": ">=2.0.1",
