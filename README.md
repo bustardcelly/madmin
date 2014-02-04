@@ -9,7 +9,7 @@ Getting and deploying madmin
 
 1. Clone the <code>madmin</code> repo:
 
-		git clone git@github.com:infrared5/madmin.git
+		git clone git://github.com:infrared5/madmin.git
 
 2. Install the node module dependencies deifned in <code>package.json</code>
 
