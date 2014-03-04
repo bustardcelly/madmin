@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/infrared5/madmin"
   },
   "engines": [
-    "node >=0.10.0"
+    "node >= 0.10.0"
   ],
   "bin": "./bin/madmin",
   "main": "./index.js",
