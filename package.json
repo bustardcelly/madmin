@@ -1,6 +1,6 @@
 {
   "name": "madmin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Todd Anderson",
     "email": "todd@infrared5.com",
@@ -13,15 +13,18 @@
   "engines": [
     "node >=0.8.6"
   ],
+  "bin": "./bin/madmin",
+  "main": "./index.js",
   "scripts": {
     "test": "grunt --gruntfile Gruntfile.js --verbose"
   },
   "dependencies": {
-    "hbs": ">=2.0.1",
-    "express": ">=3.0",
+    "hbs": "^=2.0.1",
+    "express": "^=3.0",
     "winston": "~0.6.2",
     "node-promise": "0.5.4",
-    "optimist": ">=0.3.5"
+    "optimist": "^=0.3.5",
+    "colors": "~0.6.2"
   },
   "devDependencies": {
     "jasmine-node": "*",
@@ -33,12 +36,11 @@
     "supertest": "0.5.1",
     "grunt": "~0.4.0",
     "grunt-jasmine-node": ">=0.0.5",
-    "grunt-contrib-jasmine": "~0.3.0rc5",
+    "grunt-contrib-jasmine": "~0.5.2",
     "grunt-template-jasmine-requirejs": "~0.1.0",
     "grunt-contrib-jshint": "~0.1.0",
     "grunt-contrib-watch": "~0.1.4",
     "grunt-jasmine-task": "~0.2.3",
     "temporary": "0.0.5"
-  },
-  "private": "true"
+  }
 }

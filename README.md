@@ -3,8 +3,31 @@ madmin [![Build Status](https://travis-ci.org/infrared5/madmin.png)](https://tra
 
 > admin console for generating mock services with RESTful URIs.
 
+Installing and using globally
+---
 
-Getting and deploying madmin
+```
+$ npm install madmin
+$ madmin [--port] [--json]
+```
+
+## Options:
+
+```
+usage: madmin [port] [json]
+
+Starts a server at http://localhost:<port> and provides a User Interface to document and dynamically curate a JSON based RESTful api.
+
+Defaults to port 8124 unless --port option provided.
+Defaults to load madmin lib local JSON resource file if --json option not provided.
+
+options:
+  --help              Display this help menu
+  --port              Desired port to start server on localhost
+  --json              Location to load the JSON file that describes the REST API
+```
+
+Getting and deploying madmin as standalone
 ---
 
 1. Clone the <code>madmin</code> repo:
@@ -17,7 +40,7 @@ Getting and deploying madmin
 	
 3. Run <code>madmin</code>
 
-		node index.js
+		node ./bin/madmin [--port] [--json]
 	
 Open your favorite modern web browser and go to [http://localhost:8124/admin](http://localhost:8124/admin).
 

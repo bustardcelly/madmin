@@ -1,16 +1,15 @@
-var args       = require('optimist').argv,
-    http       = require('http'),
+console.log('dir: ' + __dirname);
+var http       = require('http'),
     fs         = require('fs'),
+    path       = require('path'),
     express    = require('express'),
     app        = express(),
     hbs        = require('hbs'),
-    srcDir     = process.cwd() + '/script/com/infrared5/os/madmin',
-    controller = require(srcDir + '/controller'),
-    service    = require(srcDir + '/service'),
+    srcDir     = path.join(__dirname, 'script/com/infrared5/os/madmin'),
+    controller = require(path.join(srcDir, 'controller')),
+    service    = require(path.join(srcDir, '/service')),
     winston    = require('winston'),
-    templates  = process.cwd() + '/public/template',
-    jsonURL    = process.cwd() + '/public/resource/api.json',
-    port       = 8124,
+    templates  = path.join(__dirname, 'public/template'),
     logger     = new (winston.Logger)({
       transports: [
         new (winston.transports.Console)({
@@ -134,23 +133,14 @@ app.use( function(req, res, next){
   res.render('404');
 });
 
-// process arguments.
-if(args) {
-  if(args.hasOwnProperty('port')) {
-    port = args.port;
-  }
-  if(args.hasOwnProperty('json')) {
-    jsonURL = args.json;
-  }
-}
-
-// Provide the app instance to service which will have routes appended to it.
-service.setApplication(app);
-service.loadAPI( jsonURL ).then( function() {
-  // Start >
-  app.listen(port);
-  logger.info("madmin server running on port " + port + " in " + app.settings.env + " mode");
-},
-function(error) {
-  logger.error(error.toString());
-});
+var madmin = module.exports;
+madmin.init = function(port, json) {
+  service.setApplication(app);
+  service.loadAPI(json).then( function() {
+    app.listen(port);
+    logger.info("madmin server running on port " + port + " in " + app.settings.env + " mode");
+  },
+  function(error) {
+    logger.error(error.toString());
+  });
+};

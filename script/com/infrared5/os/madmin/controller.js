@@ -1,4 +1,4 @@
-var srcDir  = process.cwd() + '/script/com/infrared5/os/madmin',
+var srcDir  = __dirname,
     service = require(srcDir + '/service'),
     session = require(srcDir + '/session'),
     serializer = require(srcDir + '/api-serializer'),

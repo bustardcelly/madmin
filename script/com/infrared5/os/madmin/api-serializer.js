@@ -1,4 +1,4 @@
-var srcDir = process.cwd() + '/script/com/infrared5/os/madmin/',
+var srcDir = __dirname,
     session = require(srcDir + '/session'),
     Promise = require('node-promise').Promise,
     fs = require('fs'),

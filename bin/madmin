@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+'use strict';
+
+var path = require('path');
+var args = require('optimist').argv;
+
+var cli = module.exports;
+var madmin = require(path.resolve(__dirname, '../index'));
+
+var port = 8124;
+var jsonURL = path.resolve(__dirname, '..', 'public', 'resource', 'api.json');
+
+require('colors');
+
+var help = [
+  'usage: madmin [port] [json]'.white,
+  ''.yellow,
+  'Starts a server at http://localhost:<port> and provides a User Interface to document and dynamically curate a JSON based RESTful api.'.yellow,
+  ''.yellow,
+  'Defaults to port 8124 unless --port option provided.'.cyan,
+  'Defaults to load madmin lib local JSON resource file if --json option not provided.'.cyan,
+  ''.yellow,
+  'options:'.yellow,
+  '  --help              Display this help menu'.yellow,
+  '  --port              Desired port to start server on localhost'.yellow,
+  '  --json              Location to load the JSON file that describes the REST API'.yellow
+];
+
+if(args) {
+  if(args.hasOwnProperty('help')) {
+    console.log(help.join('\n'));
+  }
+  else {
+    if(args.hasOwnProperty('port')) {
+      port = args.port;
+    }
+    if(args.hasOwnProperty('json')) {
+      jsonURL = args.json;
+    }
+    madmin.init(port, jsonURL);
+  }
+}

@@ -1,5 +1,5 @@
 var app,
-    srcDir  = process.cwd() + '/script/com/infrared5/os/madmin',
+    srcDir  = __dirname,
     parser  = require(srcDir + '/api-parser'),
     session = require(srcDir + '/session'),
     serializer = require(srcDir + '/api-serializer'),
