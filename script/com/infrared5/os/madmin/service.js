@@ -32,7 +32,7 @@ function addPathFromRoute(route) {
     app[method](route.path, function(req, res, next) {
       responseDelay = setTimeout( function() {
         clearTimeout(responseDelay);
-        res.send(JSON.stringify( ( route.response === 'result' ) ? route.result : route.error ) );
+        res.status(route.status).send(JSON.stringify( ( route.response === 'result' ) ? route.result : route.error ) );
       }, route.delay);
     });
     return true;

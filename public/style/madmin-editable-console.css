@@ -58,7 +58,7 @@
 .route-data-input-block {
 	display: inline-block;
 	max-width: 460px;
-	padding-left: 15px;
+	margin: 15px;
 }
 
 .route-item-method-button {
@@ -109,4 +109,17 @@
 
 .no-parameters-label {
 	font-size: 0.8em;
+}
+
+.inline-input-field {
+	border-bottom: 1px solid #C7C7C7;
+}
+
+.inline-input-field > label{
+	display: inline-block;
+}
+
+.inline-input-field > input {
+	max-width: 40px;
+	text-align: right;
 }

@@ -15,7 +15,8 @@ define(['jquery', 'expose!script/controller/route-console-controller', 'text!tem
           error: {
           },
           response: "result",
-          delay: 1000
+          delay: 1000,
+          status: 200
         },
         newID = '2345',
         controller;

@@ -18,6 +18,11 @@
               "id": "delay",
               "required":false
             },
+            "status": {
+              "type":"number",
+              "id": "status",
+              "required":false
+            },
             "error": {
               "type":"object",
               "id": "error",

@@ -41,6 +41,10 @@
     </div>
     <div class="route-item-form-item route-item-response-form">
         <h4 class="route-item-form-label">Response: <small>select the default JSON response from the request</small></h4>
+        <div class="inline-input-field parameter-form-field">
+            <label for="statusCodeInput">Status Code:</label>
+            <input class="status-code-input" name="statusCodeInput" type="text" value="{{status}}">
+        </div>
         <div class="route-data-input-block">
             <input id="resultResponse_{{index-input this}}" class="route-item-radio" type="radio" name="response_{{index-input this}}" value="radiobutton">
             <label class="route-item-form-label route-item-radio-label" for="resultResponse_{{index-input this}}">Success: <small>paste in JSON to return for successful response</small></label>

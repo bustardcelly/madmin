@@ -96,7 +96,8 @@ define(['jquery', 'script/controller/response-form-controller', 'script/util/par
       assignRouteInputHandlers = function(controller) {
         var $element = controller.$element,
             $input = $('.route-item-path', $element),
-            $paramElem = $('.route-item-parameters', $element);
+            $paramElem = $('.route-item-parameters', $element),
+            $statusCodeField = $('.status-code-input', $element);
         
         $input.on('blur', function(event) {
           var variables, parameters;
@@ -104,6 +105,14 @@ define(['jquery', 'script/controller/response-form-controller', 'script/util/par
             variables = paramUtil.getVariableList(this.value);
             parameters = paramUtil.composeTemporaryParameterList(variables, controller.data.parameters);
             showParameterElements(parameters, $paramElem);
+            controller.isDirty = true;
+          }
+        });
+
+        $statusCodeField.on('blur', function(event) {
+          var prevValue = controller.data.status,
+              newValue = parseInt($(this).val(), 10);
+          if(prevValue !== newValue) {
             controller.isDirty = true;
           }
         });
@@ -159,12 +168,14 @@ define(['jquery', 'script/controller/response-form-controller', 'script/util/par
           var $routeMethodButton = $('.route-item-method-button', this.$element),
               $routePathField = $('.route-item-path', this.$element),
               $routeSummaryField = $('.route-item-summary', this.$element),
-              $paramContainer = $('.route-item-parameters', this.$element);
+              $paramContainer = $('.route-item-parameters', this.$element),
+              $statusCodeField = $('.status-code-input', this.$element);
 
           // fill text and value fields.
           $routeMethodButton.text( routeData.method );
           $routePathField.val( routeData.path );
           $routeSummaryField.val( routeData.summary );
+          $statusCodeField.val(parseInt(routeData.status, 10).toString());
           // fill parameters.
           showParameterElements( routeData.parameters, $paramContainer );
         },
@@ -196,13 +207,15 @@ define(['jquery', 'script/controller/response-form-controller', 'script/util/par
               $routeMethodButton = $('.route-item-method-button', this.$element),
               $routePathField = $('.route-item-path', this.$element),
               $routeSummaryField = $('.route-item-summary', this.$element),
-              $paramContainer = $('.route-item-parameters', this.$element);
+              $paramContainer = $('.route-item-parameters', this.$element),
+              $statusCodeField = $('.status-code-input', this.$element);
 
           this.isDirty = false;
           this.data.method = $routeMethodButton.text();
           this.data.path = $routePathField.val();
           this.data.parameters = getParameterElements($paramContainer);
           this.data.summary = $routeSummaryField.val();
+          this.data.status = parseInt($statusCodeField.val(), 10);
           responseForm.serialize();
           return this.data;
         },

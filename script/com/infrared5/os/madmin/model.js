@@ -54,6 +54,11 @@ var winston = require('winston'),
           value: 1000,
           writable: true,
           enumerable: true
+        },
+        "status": {
+          value: 200,
+          writable: true,
+          enumerable: true
         }
       });
     },

@@ -1,3 +1,18 @@
 {
-  "api": []
+  "api": [
+    {
+      "id": "1394119026317",
+      "path": "/test",
+      "method": "GET",
+      "summary": "",
+      "parameters": [],
+      "result": {
+        "hello": "world"
+      },
+      "error": {},
+      "response": "result",
+      "delay": 1000,
+      "status": 500
+    }
+  ]
 }
