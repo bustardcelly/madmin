@@ -220,7 +220,7 @@ Tools/Libraries
 
 _Testing_
 
-*	[Jasmine](http://pivotal.github.com/jasmine/)
+*	[Jasmine](https://jasmine.github.io/)
 *	[Sinon](http://sinonjs.org/)
 *	[jasmine-async](https://github.com/derickbailey/jasmine.async)
 *	[require-expose-plugin](https://github.com/bustardcelly/require-expose-plugin)
